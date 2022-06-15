@@ -2,7 +2,7 @@
 
 [![wakatime](https://wakatime.com/badge/user/31d076e5-7f32-41dd-b1a2-a772c1767c0c/project/263f7393-70b2-4bcf-b7f0-126106a4a97b.svg)](https://wakatime.com/badge/user/31d076e5-7f32-41dd-b1a2-a772c1767c0c/project/263f7393-70b2-4bcf-b7f0-126106a4a97b)
 
-This Repository is a collection of react projects while undergoing the React Internship. Every projects are defined as per the days of the internship including self-practices and tasks assigned by the mentors.
+This Repository is a collection of react projects while undergoing the React Internship. Every projects are defined as per the days of the internship including self-practices and tasks assigned by the mentor.
 
 ## Table of Content
 
@@ -16,7 +16,7 @@ This Repository is a collection of react projects while undergoing the React Int
     - [`npm run eject`](#npm-run-eject)
   - [Learn More](#learn-more)
 
-## Activity Table for Individual [Days](./Days/Readme.md)
+## Activity Table for Individual [Day](./Days/Readme.md)
 
 | [Day](Days/Readme.md) | Date       | Project                                    | Task                                                             | Description                             |
 | --------------------- | ---------- | ------------------------------------------ | ---------------------------------------------------------------- | --------------------------------------- |
