@@ -17,7 +17,9 @@ This Project is a timer game for the [Day-03-Self-Practice](./README.md) a part 
 Screenshots of application are shown below.
 
 Initial Screenshot of Time Game
+
 !["Initial"](./docs/Timer-Initial.jpeg)
 
 After time stops.
+
 ![Game End"](./docs/Timer-Completed.jpeg)
