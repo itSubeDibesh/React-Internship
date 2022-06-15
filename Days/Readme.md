@@ -1,4 +1,4 @@
-# Projects of Individual Days in Internship
+# Projects of Individual Day in Internship
 
 -   [👈 Go Back ](./../Readme.md)
     -   [📁 Day-01-Self-Practice](./Day-01-Self-Practice/README.md)
