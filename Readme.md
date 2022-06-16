@@ -8,7 +8,8 @@ This Repository is a collection of react projects while undergoing the React Int
 
 - [React-Internship](#react-internship)
   - [Table of Content](#table-of-content)
-  - [Activity Table for Individual Days](#activity-table-for-individual-days)
+  - [Activity Table for Individual Day](#activity-table-for-individual-day)
+  - [Notes](#notes)
   - [Available Scripts](#available-scripts)
     - [`npm start`](#npm-start)
     - [`npm test`](#npm-test)
@@ -23,6 +24,10 @@ This Repository is a collection of react projects while undergoing the React Int
 | 1                     | 06/13/2022 | Router Demo (Router, Components, useState) | [📦 Day-01-Self-Practice](./Days/Day-01-Self-Practice/README.md) | Router Basics, Components, State        |
 | 2                     | 06/13/2022 | Demo Application (Form Input)              | [📦 Day-01-Task](./Days/Day-01-Task/README.md)                   | Router Basics, Components, State        |
 | 3                     | 06/15/2022 | Time Game (Hooks, TimeOut)                 | [📦 Day-03-Self-Practice](./Days/Day-03-Self-Practice/README.md) | Hooks (useState, useEffect), Components |
+
+## Notes
+
+Several Notes are included in [Notes directory](./Notes/Readme.md) explanting the concepts that you need while working with react.
 
 ## Available Scripts
 
