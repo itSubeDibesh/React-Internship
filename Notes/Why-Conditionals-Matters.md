@@ -45,8 +45,6 @@ Every thing boils down to the datatype[^2] in JavaScript, Which is divided into 
 
 Under the hood, **ReactJs** inherits JavaScript and it's datatypes, when a difference is conditional or state is detected by the react it re-renders the components. That's the core reason why conditionals matters in ReactJs.
 
-## References
-
 [^1]: [JavaScript type coercion explained](https://www.freecodecamp.org/news/js-type-coercion-explained-27ba3d9a2839/)
 [^2]: [Primitive Data Types in JavaScript](https://www.educba.com/primitive-data-types-in-javascript/)
 [^3]: [Primitive and Non-primitive data-types in JavaScript](https://www.geeksforgeeks.org/primitive-and-non-primitive-data-types-in-javascript/)
