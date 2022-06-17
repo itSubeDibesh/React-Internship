@@ -1,6 +1,6 @@
 # Demo Application
 
-[👈 Go Back ](./../Readme.md)
+[👈 Go Back](./../Readme.md)
 
 **Note📓:** **_This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)._**
 
