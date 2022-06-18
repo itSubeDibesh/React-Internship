@@ -6,11 +6,11 @@ import API from '../../backend/api';
 
 export default function BasicInfo() {
     const
-        [firstName, setFirstName] = useState(""),
-        [lastName, setLastName] = useState(""),
+        [firstName, setFirstName] = useState(null),
+        [lastName, setLastName] = useState(null),
         [age, setAge] = useState(null),
         [showMessage, setShowMessage] = useState({
-            message: "",
+            message: null,
             show: false
         }),
         [initialLoad, setInitialLoad] = useState(true),
@@ -30,10 +30,11 @@ export default function BasicInfo() {
     }
 
     // Call the Get Method to get the data from the backend
+    // console.log("Before Hook", initialLoad, showMessage, isLoading)
     useEffect(() => {
+        console.log("Inside Hook", initialLoad, showMessage, isLoading)
         // Fetch Data on Initial Load
         if (initialLoad) {
-            console.log(new Date().toUTCString(), "Effects Inside", `Initial Load: ${initialLoad}`);
             fetchData();
             setInitialLoad(false);
         }
@@ -52,17 +53,15 @@ export default function BasicInfo() {
                 setIsLoading(false)
             }, 2e3);
         }
-    }, [initialLoad, showMessage.show, isLoading]);
+    }, [initialLoad, showMessage, isLoading]);
 
     // Reset The Form
     function resetForm() {
-        [setFirstName, setLastName].forEach(item => item(""))
-        setAge(null)
+        [setFirstName, setLastName, setAge].forEach(item => item(null))
     }
 
     // Delete the data from the backend
-    function DeleteButton(e) {
-        e.preventDefault()
+    function DeleteButton() {
         API()
             .delete()
             .then(response => {
@@ -76,9 +75,8 @@ export default function BasicInfo() {
     }
 
     function SubmitButton(e) {
-        e.preventDefault()
         // Call API to Store Data
-        if (firstName !== "" && lastName !== "" && age !== null) {
+        if (firstName !== null && lastName !== null && age !== null) {
             API()
                 .save(firstName, lastName, age)
                 .then(response => {
@@ -98,37 +96,37 @@ export default function BasicInfo() {
 
     return <>
         <Loader isLoading={isLoading} title="Basic Information" />
-        {!isLoading &&
+        {!isLoading ?
             <div className='row'>
                 <form className='col-6'>
                     <div className='card'>
                         <h4>Basic Information</h4>
                         <div className='form-group'>
                             <label htmlFor="First Name">First Name :</label>
-                            <input type="text" id="firstName" placeholder='Enter First Name' value={firstName ? firstName : ""} onChange={(e) => setFirstName(e.target.value)}></input>
+                            <input type="text" id="firstName" placeholder='Enter First Name' value={firstName !== null ? firstName : ""} onChange={(e) => setFirstName(e.target.value)}></input>
                         </div>
                         <div className='form-group'>
                             <label htmlFor="First Name">Last Name :</label>
-                            <input type="text" id="lastName" placeholder='Enter Last Name' value={lastName ? lastName : ""} onChange={(e) => setLastName(e.target.value)}></input>
+                            <input type="text" id="lastName" placeholder='Enter Last Name' value={lastName !== null ? lastName : ""} onChange={(e) => setLastName(e.target.value)}></input>
                         </div>
                         <div className='form-group'>
                             <label htmlFor="age">Your Age :</label>
                             <input type="number" id="age" min="1" max="100" placeholder='Enter Age' value={age !== null ? age : ""} onChange={(e) => setAge(e.target.value)}></input>
                         </div>
                         <div className='form-group center'>
-                            <button className='btn btn-success m-3' onClick={(e) => SubmitButton(e)}>Submit</button>
-                            <button className='btn btn-danger' onClick={(e) => DeleteButton(e)}>Delete</button>
+                            <button className='btn btn-success m-3' type="button" onClick={SubmitButton}>Submit</button>
+                            <button className='btn btn-danger' onClick={DeleteButton}>Delete</button>
                         </div>
                     </div>
                 </form>
-                {showMessage.show &&
+                {showMessage.show ?
                     <div className='col-6'>
                         <div className='card'>
                             <h4 className='text-center'>Alert 🔔:</h4>
                             <strong>{showMessage.message}</strong>
                         </div>
-                    </div>}
-            </div>
+                    </div> : null}
+            </div> : null
         }
     </>
 }
