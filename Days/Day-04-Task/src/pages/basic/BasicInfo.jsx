@@ -2,17 +2,14 @@ import React, { useState, useEffect } from 'react';
 import './basicInfo.css'
 import Loader from '../../components/Loader/Loader';
 import API from '../../backend/api';
-
+import NavBar from '../../components/NavBar/NavBar';
 
 export default function BasicInfo() {
     const
-        [firstName, setFirstName] = useState(null),
-        [lastName, setLastName] = useState(null),
-        [age, setAge] = useState(null),
-        [showMessage, setShowMessage] = useState({
-            message: null,
-            show: false
-        }),
+        [firstName, setFirstName] = useState(""),
+        [lastName, setLastName] = useState(""),
+        [age, setAge] = useState(""),
+        [showMessage, setShowMessage] = useState(null),
         [initialLoad, setInitialLoad] = useState(true),
         [isLoading, setIsLoading] = useState(true);
     ;
@@ -22,50 +19,55 @@ export default function BasicInfo() {
         API()
             .get()
             .then(response => {
-                console.log("GET API RESPONSE");
+                console.log("GET API RESPONSE", response);
                 setFirstName(response.firstName)
                 setLastName(response.lastName)
                 setAge(response.age)
             })
     }
 
-    // Call the Get Method to get the data from the backend
-    // console.log("Before Hook", initialLoad, showMessage, isLoading)
     useEffect(() => {
-        console.log("Inside Hook", initialLoad, showMessage, isLoading)
-        // Fetch Data on Initial Load
+        console.log("useEffect:initialLoad - ", initialLoad);
         if (initialLoad) {
-            fetchData();
             setInitialLoad(false);
+            fetchData();
         }
+    }, [initialLoad]);
+
+    useEffect(() => {
+        console.log("useEffect:showMessage - ", showMessage);
         // Auto Hide Alert
-        if (showMessage.show) {
+        if (showMessage != null) {
             setTimeout(() => {
-                setShowMessage({
-                    message: "",
-                    show: false
-                })
+                setShowMessage(null)
             }, 2e3);
         }
+    }, [showMessage])
+
+    useEffect(() => {
+        console.log("useEffect:isLoading - ", isLoading);
         // Auto Hide Loading
         if (isLoading) {
             setTimeout(() => {
                 setIsLoading(false)
             }, 2e3);
         }
-    }, [initialLoad, showMessage, isLoading]);
+    }, [isLoading])
 
     // Reset The Form
     function resetForm() {
-        [setFirstName, setLastName, setAge].forEach(item => item(null))
+        [setFirstName, setLastName, setAge].forEach(item => item(""))
     }
 
     // Delete the data from the backend
-    function DeleteButton() {
+    function DeleteButton(e) {
+        e.preventDefault();
+        setIsLoading(true)
         API()
             .delete()
             .then(response => {
                 console.log("Delete API RESPONSE");
+                setIsLoading(false)
                 setShowMessage({
                     message: `Data delete ${response}`,
                     show: true
@@ -76,11 +78,13 @@ export default function BasicInfo() {
 
     function SubmitButton(e) {
         // Call API to Store Data
-        if (firstName !== null && lastName !== null && age !== null) {
+        if (firstName !== "" && lastName !== "" && age !== "") {
+            setIsLoading(true)
             API()
                 .save(firstName, lastName, age)
                 .then(response => {
                     console.log("Save API RESPONSE");
+                    setIsLoading(false)
                     setShowMessage({
                         message: `Data saved ${response}`,
                         show: true
@@ -95,7 +99,15 @@ export default function BasicInfo() {
     }
 
     return <>
+        <NavBar />
         <Loader isLoading={isLoading} title="Basic Information" />
+        {showMessage != null ?
+            <div className='row'>
+                <div className='card'>
+                    <h4 className='text-center'>Alert 🔔:</h4>
+                    <strong>{showMessage.message}</strong>
+                </div>
+            </div> : null}
         {!isLoading ?
             <div className='row'>
                 <form className='col-6'>
@@ -119,13 +131,6 @@ export default function BasicInfo() {
                         </div>
                     </div>
                 </form>
-                {showMessage.show ?
-                    <div className='col-6'>
-                        <div className='card'>
-                            <h4 className='text-center'>Alert 🔔:</h4>
-                            <strong>{showMessage.message}</strong>
-                        </div>
-                    </div> : null}
             </div> : null
         }
     </>
