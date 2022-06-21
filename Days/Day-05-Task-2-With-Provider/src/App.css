@@ -1,0 +1,253 @@
+:root {
+  --black: rgb(36, 36, 36);
+  --white: rgba(255, 255, 255, 0.897);
+  --purple: rgba(102, 51, 153, 1);
+  --purple-light: rgba(102, 51, 153, 0.5);
+  --purple-dark: rgba(102, 51, 153, 0.2);
+  --yellow: rgba(255, 255, 0, 0.897);
+  --yellow-light: rgba(255, 255, 0, 0.5);
+  --yellow-dark: rgba(255, 255, 0, 0.2);
+  --green: rgba(0, 255, 0, 0.897);
+  --green-light: rgba(0, 255, 0, 0.5);
+  --green-dark: rgba(0, 255, 0, 0.2);
+  --red: rgba(255, 0, 0, 0.897);
+  --red-light: rgba(255, 0, 0, 0.5);
+  --red-dark: rgba(255, 0, 0, 0.2);
+  --blue: rgba(100, 100, 219, 0.897);
+  --blue-light: rgba(0, 0, 255, 0.5);
+  --blue-dark: rgba(0, 0, 255, 0.2);
+  --orange: rgba(255, 165, 0, 0.897);
+  --orange-light: rgba(255, 165, 0, 0.5);
+  --orange-dark: rgba(255, 165, 0, 0.2);
+  --brown: rgba(165, 42, 42, 0.897);
+  --brown-light: rgba(165, 42, 42, 0.5);
+  --brown-dark: rgba(165, 42, 42, 0.2);
+  --gray: rgba(128, 128, 128, 0.897);
+  --gray-light: rgba(128, 128, 128, 0.5);
+  --gray-dark: rgba(128, 128, 128, 0.2);
+}
+
+.container {
+  /* border: 0.1em solid var(--black); */
+  /* border-radius: 0.5em; */
+  box-shadow: 0.2em 0.2em 0.2em black;
+}
+
+.box {
+  /* border: 0.1em solid var(--black); */
+  box-shadow: 0.2em 0.2em 0.2em black;
+}
+
+.rounded {
+  border-radius: 0.5em;
+}
+
+li {
+  display: inline-block;
+  margin: 0 5px 0 5px;
+}
+
+a {
+  color: var(--black);
+  background-color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid var(--gray-dark);
+  border-radius: 0.2em;
+  box-shadow: 5px 5px 5px var(--gray);
+  padding: 5px;
+}
+
+a:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.bg-orange {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.bg-purple {
+  background-color: var(--purple);
+  color: var(--white);
+}
+
+label {
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0.2em;
+  float: left;
+  color: var(--purple);
+}
+
+input {
+  font-size: 0.8em;
+  padding: 1em;
+  margin: 0.2em;
+  width: 80%;
+  border: 1px solid var(--gray);
+  border-radius: 0.2em;
+  color: var(--purple);
+  font-weight: bold;
+  box-shadow: 5px 5px 5px var(--orange);
+}
+
+.text-center {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+input:hover {
+  border: 0.1em solid var(--orange)
+}
+
+.header {
+  color: var(--purple);
+  font-weight: 900;
+  font-size: 1.2em;
+}
+
+.card-header {
+  background-color: var(--purple);
+  color: var(--white);
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.2em;
+  border-radius: 0.5em 0 0 0.5em;
+  margin-top: -1.5em;
+  margin-right: -1.19em;
+}
+
+.form-group {
+  margin-bottom: 1em;
+  padding: 0.1em;
+}
+
+.btn {
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0.4em;
+  margin: 0.3em;
+  border: 1px solid var(--gray-dark);
+  border-radius: 0.4em;
+  box-shadow: 5px 5px 5px var(--gray);
+}
+
+.text-purple {
+  color: var(--purple);
+}
+
+.text-orange {
+  color: var(--orange);
+}
+
+.text-blue {
+  color: var(--blue);
+}
+
+.btn-purple {
+  background-color: var(--purple);
+  color: var(--white);
+}
+
+.btn-orange {
+  background-color: var(--orange);
+  color: var(--black);
+}
+
+.btn-purple:hover {
+  background-color: var(--purple-light);
+  color: var(--white);
+}
+
+.btn-orange:hover {
+  background-color: var(--orange-light);
+  color: var(--black);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.col,
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.col-11 {
+  width: 91.67%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-8 {
+  width: 66.67%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-5 {
+  width: 41.67%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-2 {
+  width: 16.67%;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+
+.card {
+  border: 0.1em solid var(--black);
+  margin: 2em;
+  padding: 1.2em;
+  border-radius: 0.5em;
+  box-shadow: 0.1em 0.1em 0.1em var(--black);
+}

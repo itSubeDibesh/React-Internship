@@ -17,20 +17,28 @@ This Repository is a collection of react projects while undergoing the React Int
     - [`npm run eject`](#npm-run-eject)
   - [Learn More](#learn-more)
 
-## Activity Table for Individual [Day](./Days/Readme.md)
+## Activity Table for [Individual Day](./Days/Readme.md)
 
 | [Day](Days/Readme.md) | Date       | Project                                    | Task                                                             | Description                             |
 | :--------------------- | :---------- | :------------------------------------------ | :---------------------------------------------------------------- | :--------------------------------------- |
-| 1                     | 06/13/2022 | Router Demo  | [📦 Practice](./Days/Day-01-Self-Practice/README.md) | Router Basics, Components, State        |
-| 1                     | 06/13/2022 | Demo Application              | [📦 Task](./Days/Day-01-Task/README.md)                   | Router Basics, Components, State        |
-| 3                     | 06/15/2022 | Time Game              | [📦 Practice](./Days/Day-03-Self-Practice/README.md) | Hooks (useState, useEffect), Components |
-| 4                     | 06/16/2022 | API Handler             | [📦 Task](./Days/Day-04-Task/README.md) | Hooks (useState, useEffect), Components, Props |
-| 5                     | 06/21/2022 | Without Provider               | [📦 Task-1](./Days/Day-05-Task-1-Without-Provider/README.md) | Hooks (useState, useEffect, useNavigate), Components, Props, Router |
-| 5                    | 06/21/2022 |  With Provider            | [📦 Task-2](./Days/Day-05-Task-1-Without-Provider/README.md) | Hooks (useState, useEffect), Components, Props, Providers, Router |
+| 1                     | [06/13/2022](./Days/Day-01-Self-Practice/README.md) | Router Demo  | [📦 Practice](./Days/Day-01-Self-Practice/README.md) | Router Basics, Components, State        |
+| 1                     |[06/13/2022](./Days/Day-01-Task/README.md) | Demo Application              | [📦 Task](./Days/Day-01-Task/README.md)                   | Router Basics, Components, State        |
+| 3                     | [06/15/2022](./Days/Day-03-Self-Practice/README.md) | Time Game              | [📦 Practice](./Days/Day-03-Self-Practice/README.md) | Hooks (useState, useEffect), Components |
+| 4                     | [06/16/2022](./Days/Day-04-Task/README.md) | API Handler             | [📦 Task](./Days/Day-04-Task/README.md) | Hooks (useState, useEffect), Components, Props |
+| 5                     | [06/21/2022](./Days/Day-05-Task-1-Without-Provider/README.md) | Without Provider               | [📦 Task-1](./Days/Day-05-Task-1-Without-Provider/README.md) | Hooks (useState, useEffect, useNavigate), Components, Props, Router |
+| 5                    | [06/21/2022](./Days/Day-05-Task-2-With-Provider/README.md) |  With Provider            | [📦 Task-2](./Days/Day-05-Task-2-With-Provider/README.md) | Hooks (useState, useEffect, useNavigate, createContext, useContext), Components, Props, Providers, Router |
 
 ## Notes
 
 Several Notes are included in [Notes directory](./Notes/Readme.md) explanting the concepts that you need while working with react.
+
+- [📂 Javascript](./Notes/Javascript/Readme.md)
+  - [📃 What are closures?](./Notes/Javascript/What-Are-Closures.md)
+  - [📃 What are higher level functions?](./Notes/Javascript/What-Are-Higherlevel-Functions.md)
+- [📂 React](./Notes/React/Readme.md)
+  - [📃 Why conditionals matters?](./Notes/React/Why-Conditionals-Matters.md)
+  - [📃 What are props?](./Notes/React/What-Are-Props.md)
+  - [📃 What are providers?](./Notes/React/What-Are-Providers.md)
 
 ## Available Scripts
 
