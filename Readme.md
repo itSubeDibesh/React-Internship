@@ -20,13 +20,13 @@ This Repository is a collection of react projects while undergoing the React Int
 ## Activity Table for Individual [Day](./Days/Readme.md)
 
 | [Day](Days/Readme.md) | Date       | Project                                    | Task                                                             | Description                             |
-| --------------------- | ---------- | ------------------------------------------ | ---------------------------------------------------------------- | --------------------------------------- |
-| 1                     | 06/13/2022 | Router Demo (Router, Components, useState) | [📦 01-Practice](./Days/Day-01-Self-Practice/README.md) | Router Basics, Components, State        |
-| 1                     | 06/13/2022 | Demo Application (Form Input)              | [📦 01-Task](./Days/Day-01-Task/README.md)                   | Router Basics, Components, State        |
-| 3                     | 06/15/2022 | Time Game (Hooks, TimeOut)                 | [📦 03-Practice](./Days/Day-03-Self-Practice/README.md) | Hooks (useState, useEffect), Components |
-| 4                     | 06/16/2022 | API Handler  (Hooks, MockAPI)                 | [📦 04-Task](./Days/Day-04-Task/README.md) | Hooks (useState, useEffect), Components, Props |
-| 5                     | 06/21/2022 | State Without Provider  (Hooks, Custom Components)                 | [📦 05-Task-1](./Days/Day-05-Task-1-Without-Provider/README.md) | Hooks (useState, useEffect, useNavigate), Components, Props, Router |
-| 45                    | 06/21/2022 | State With Provider  (Hooks, Custom Components)                 | [📦 05-Task-2](./Days/Day-05-Task-1-Without-Provider/README.md) | Hooks (useState, useEffect), Components, Props, Providers, Router |
+| :--------------------- | :---------- | :------------------------------------------ | :---------------------------------------------------------------- | :--------------------------------------- |
+| 1                     | 06/13/2022 | Router Demo  | [📦 Practice](./Days/Day-01-Self-Practice/README.md) | Router Basics, Components, State        |
+| 1                     | 06/13/2022 | Demo Application              | [📦 Task](./Days/Day-01-Task/README.md)                   | Router Basics, Components, State        |
+| 3                     | 06/15/2022 | Time Game              | [📦 Practice](./Days/Day-03-Self-Practice/README.md) | Hooks (useState, useEffect), Components |
+| 4                     | 06/16/2022 | API Handler             | [📦 Task](./Days/Day-04-Task/README.md) | Hooks (useState, useEffect), Components, Props |
+| 5                     | 06/21/2022 | Without Provider               | [📦 Task-1](./Days/Day-05-Task-1-Without-Provider/README.md) | Hooks (useState, useEffect, useNavigate), Components, Props, Router |
+| 5                    | 06/21/2022 |  With Provider            | [📦 Task-2](./Days/Day-05-Task-1-Without-Provider/README.md) | Hooks (useState, useEffect), Components, Props, Providers, Router |
 
 ## Notes
 
