@@ -88,12 +88,20 @@ export default function BasicInfo() {
             if (firstCondition && secondCondition) {
                 Api
                     .delete()
-                    .then(() => {
+                    .then((status) => {
                         console.log("API Delete Response")
-                        setAlert({
-                            showAlert: true,
-                            message: "User Deleted Successfully"
-                        })
+                        if (status === "success")
+                            setAlert({
+                                showAlert: true,
+                                message: "User Deleted Successfully"
+                            })
+                        else {
+                            setAlert({
+                                showAlert: true,
+                                message: "Problem Deleting Using"
+                            })
+
+                        }
                     })
             } else {
                 setAlert({

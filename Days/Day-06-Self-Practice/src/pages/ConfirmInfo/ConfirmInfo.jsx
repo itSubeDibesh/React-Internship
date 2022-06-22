@@ -24,15 +24,23 @@ export default function ConfirmInfo() {
             console.log("Submit Button Triggered");
             e.preventDefault();
             saveDetails()
-                .then(() => {
+                .then((status) => {
                     console.log("API Save Response")
-                    setUserDetails({ firstName: '', lastName: '', age: '' });
-                    setAlert({
-                        showAlert: true,
-                        message: "User Added Successfully"
-                    })
-                    // Redirect to Basic Info Page
-                    navigate("/", { replace: true })
+                    if (status === "success") {
+                        setUserDetails({ firstName: '', lastName: '', age: '' });
+                        setAlert({
+                            showAlert: true,
+                            message: "User Added Successfully"
+                        })
+                        // Redirect to Basic Info Page
+                        navigate("/", { replace: true })
+                    }
+                    else {
+                        setAlert({
+                            showAlert: true,
+                            message: "Problem adding User"
+                        })
+                    }
                 })
         },
         // Api Works
@@ -42,13 +50,9 @@ export default function ConfirmInfo() {
         }
     // Effect Handler
     useEffect(() => {
-        if (userDetails.firstName === "" || userDetails.lastName === '' || userDetails.age === '') {
+        if (userDetails.firstName === "" || userDetails.lastName === '' || userDetails.age === '')
             navigate("/", { replace: true })
-        } else {
-            setTimeout(() => {
-                setLoading(false)
-            }, 1e3);
-        }
+        else setTimeout(() => { setLoading(false) }, 1e3);
     }, [userDetails, navigate, setLoading])
     // Jsx Handler
     if (userDetails.firstName !== "" || userDetails.lastName !== '' || userDetails.age !== '')
