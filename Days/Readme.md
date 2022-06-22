@@ -8,3 +8,4 @@
   - [📂 Day-05-Task-1-Without-Provider](./Day-05-Task-1-Without-Provider/README.md)
   - [📂 Day-05-Task-2-With-Provider](./Day-05-Task-2-With-Provider/README.md)
   - [📂 Day-06-Self-Practice](./Day-06-Self-Practice/README.md)
+  - [📂 Day-07-Task](./Day-07-Task/README.md)
