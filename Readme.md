@@ -27,7 +27,7 @@ This Repository is a collection of react projects while undergoing the React Int
 | 4                     | [06/16/2022](./Days/Day-04-Task/README.md) | API Handler             | [📦 Task](./Days/Day-04-Task/README.md) | Hooks (useState, useEffect), Components, Props |
 | 5                     | [06/20/2022](./Days/Day-05-Task-1-Without-Provider/README.md) | Without Provider               | [📦 Task-1](./Days/Day-05-Task-1-Without-Provider/README.md) | Hooks (useState, useEffect, useNavigate), Components, Props, Router |
 | 5                    | [06/20/2022](./Days/Day-05-Task-2-With-Provider/README.md) |  With Provider            | [📦 Task-2](./Days/Day-05-Task-2-With-Provider/README.md) | Hooks (useState, useEffect, useNavigate, createContext, useContext), Components, Props, Providers, Router |
-| 6                    | [06/21/2022](./Days/Day-06-Self-Practice/README.md) |  With Provider            | [📦 Practice](./Days/Day-06-Self-Practice/README.md) | Hooks (useState, useEffect, useNavigate, createContext, useContext), Components, Props, Providers, Router |
+| 6                    | [06/21/2022](./Days/Day-06-Self-Practice/README.md) |  All Concept merged            | [📦 Practice](./Days/Day-06-Self-Practice/README.md) | Hooks (useState, useEffect, useNavigate, createContext, useContext), Components, Props, Providers, Router |
 
 ## Notes
 
